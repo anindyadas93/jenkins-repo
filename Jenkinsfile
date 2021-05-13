@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    withCredentials([usernameColonPassword(credentialsId: 'ubuntu-ec2', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                    withCredentials([usernamePassword(credentialsId: 'ubuntu-ec2', passwordVariable: 'pass', usernameVariable: 'user')]) {
                         remote.user = user
                         remote.password = pass
                         //sshRemove remote: remote, path: "/var/www/html/index.html"

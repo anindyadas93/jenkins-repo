@@ -22,7 +22,7 @@ pipeline {
                         remote.user = user
                         remote.password = pass
                         //sshRemove remote: remote, path: "/var/www/html/index.html"
-                        sshPut remote: remote, from : 'index.html', into: '/var/www/html/'
+                        sshPut remote: remote, from: 'index.html', into: '/var/www/html/'
                     }
                 }
             }
